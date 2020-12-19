@@ -5,11 +5,14 @@
             
               <h2>What models perform the best when it comes to forecasting volatility?</h2>
             
+              <p> <br> </p>
+              
               <p> First, we will analyse the daily log returns of the Dow Jones index. <br> </p>
-                
-                <br>
+             
 
                 <img src="img/Daily_log_ret+volatility.png">
+              
+              <p> <br> <br> </p>
               
               <p> Looking at the ACF and PACF, the only signficant lags seems to be 1 or 2. 
               However, after several tests, we got that no Auto-Regressive process is necessary for the mean model. For the volatility process, 
@@ -17,13 +20,18 @@
             
                 <img src="img/autocorrelation.png" alt="autocorrelation plot">
             
-              <br>
+              <p> <br> <br> </p>
               
-              <p> This is all great but let's talk math now. The most efficient model we found is the GARCH(1,1) with zero mean and
+              <p> This is all great but let's talk math now. <br>
+                  The most efficient model we found is the GARCH(1,1) with zero mean and
               Student's t distributed errors. The formulas of the model are the following: </p>
+              
+              <p> <br> </p>
             
               <p><span class="math display">\[r_t = 0 + \epsilon_t\]</span> <span class="math display">\[\sigma^2_t = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2\]</span> <span class="math display">\[\epsilon_t = \sigma_t e_t,\,\,\, e_t \sim t_{\nu}\]</span></p>
             
+              <p> <br> <br> </p>
+              
               <p> Fitting the model to the data, we got the following results: </p> 
 
                 <div align ="center">
@@ -32,13 +40,11 @@
               <table class="simpletable" ><caption>Distribution</caption><tr>   <td></td>     <th>coef</th>     <th>std err</th>      <th>t</th>       <th>P>|t|</th>   <th>95.0% Conf. Int.</th> </tr><tr>  <th>nu</th> <td>    6.9856</td> <td>    3.506</td> <td>    1.992</td> <td>4.632e-02</td> <td>[  0.114, 13.857]</td></tr></table><br/><br/> Covariance estimator: robust'
               </div>
 
-              <br>
-            
-              <br>
+              <p> <br> <br> </p>
                                                                           
               <img src="img/Basemodel.png" alt="baseline plot" >
           
-              <br>
+              <p> <br> <br> </p>
       
               <p> The performance of this GARCH model is already quite good! A mean absolute error of 0.0055!
                 But let's see if we can further improve it using Google Trends. </p> 
