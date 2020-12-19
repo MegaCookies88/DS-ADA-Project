@@ -5,10 +5,14 @@
               <h2>How much does adding Trends data outperform models not using it?</h2>
             
             <p> The most efficient model we found is the GARCH(1,1) with the selected Trends data as mean regressors and Student's t distributed errors. 
-              So the same model but we just add trends data as predictors in the mean process. <br>
+              So the same model but we just add trends data as predictors in the mean process. <br> <br>
               The formulas of the model are the following: </p>
+            
+            <p> <br> <br> </p>
 
               <p><span class="math display">\[r_t  =  \mu + \text{dow jones.nsa}_t + \text{crisis.nsa}_t + \epsilon_t\]</span> <span class="math display">\[\sigma^2_t   =  \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2\]</span> <span class="math display">\[\epsilon_t  =  \sigma_t e_t,\,\,\, e_t  \sim  t_{\nu}\]</span></p>
+            
+            <p> <br> </p>
             
             <p> Fitting the model to the data, we got the following results: </p>
             
@@ -21,9 +25,13 @@
               
               <img src="img/trendsmodel.png" alt="trends model plot" >
 
-            <p> We got a mean absolute error of 0.0044. </p>
-            <br>
+            <p> <br> </p>
+            
+            <p> We got a mean absolute error of 0.0044. <br> </p>
+            
               <h2>That's 20% improvement in the forecast!</h2>
+            
+            <p> <br> </p>
               
               <p>This is quite a good performance. This might help predicting future increases in volatility which could suggest an upcoming crisis. 
                 It can be used to bet against the market by shorting stocks, contracting put options with banks. <br> </p>
