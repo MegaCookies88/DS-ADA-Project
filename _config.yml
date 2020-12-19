@@ -1,0 +1,14 @@
+# Site settings
+title: forecasting stock volatility
+email:
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://laragervaise.github.io/forecasting-stock-volatility/" # the base hostname & protocol for your site
+
+twitter_username:
+github_username1: laragervaise
+github_username2: MegaCookies88
+github_username3: nourGhribi
+
+# Build settings
+markdown: kramdown
