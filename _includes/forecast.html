@@ -8,13 +8,11 @@
               So the same model but we just add trends data as predictors in the mean process. <br> <br>
               The formulas of the model are the following: </p>
             
-            <p> <br> <br> </p>
 
               <p><span class="math display">\[r_t  =  \mu + \text{dow jones.nsa}_t + \text{crisis.nsa}_t + \epsilon_t\]</span> <span class="math display">\[\sigma^2_t   =  \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2\]</span> <span class="math display">\[\epsilon_t  =  \sigma_t e_t,\,\,\, e_t  \sim  t_{\nu}\]</span></p>
             
-            <p> <br> </p>
             
-            <p> Fitting the model to the data, we got the following results: </p>
+            <p> <br> Fitting the model to the data, we got the following results: </p>
             
             <div align="center">
               <table class="simpletable"><caption>AR-X - GARCH Model Results</caption> <tr>  <th>Dep. Variable:</th>            <td>DJI</td>           <th>  R-squared:         </th>  <td>   0.015</td> </tr><tr>  <th>Mean Model:</th>              <td>AR-X</td>           <th>  Adj. R-squared:    </th>  <td>  -0.009</td> </tr><tr>  <th>Vol Model:</th>               <td>GARCH</td>          <th>  Log-Likelihood:    </th> <td>   7.25056</td></tr><tr>  <th>Distribution:</th>  <td>Standardized Student's t</td> <th>  AIC:               </th> <td> -0.501113</td></tr><tr>  <th>Method:</th>           <td>Maximum Likelihood</td>    <th>  BIC:               </th> <td>   16.3459</td></tr><tr>  <th></th>                           <td></td>             <th>  No. Observations:  </th>     <td>82</td>    </tr><tr>  <th>Date:</th>              <td>Fri, Dec 18 2020</td>     <th>  Df Residuals:      </th>     <td>75</td>    </tr><tr>  <th>Time:</th>                  <td>19:21:41</td>         <th>  Df Model:          </th>      <td>7</td>    </tr></table>
@@ -22,18 +20,17 @@
               <table class="simpletable"><caption>Volatility Model</caption><tr>      <td></td>        <th>coef</th>     <th>std err</th>      <th>t</th>       <th>P>|t|</th>      <th>95.0% Conf. Int.</th>   </tr><tr>  <th>omega</th>    <td>1.7414e-03</td> <td>1.614e-03</td> <td>    1.079</td> <td>    0.281</td> <td>[-1.422e-03,4.905e-03]</td></tr><tr>  <th>alpha[1]</th> <td>    0.4291</td> <td>8.899e-02</td> <td>    4.822</td> <td>1.423e-06</td>    <td>[  0.255,  0.604]</td>  </tr><tr>  <th>beta[1]</th>  <td>    0.5709</td> <td>7.866e-02</td> <td>    7.258</td> <td>3.927e-13</td>    <td>[  0.417,  0.725]</td>  </tr></table>
               <table class="simpletable"><caption>Distribution</caption><tr>   <td></td>     <th>coef</th>     <th>std err</th>      <th>t</th>       <th>P>|t|</th>   <th>95.0% Conf. Int.</th> </tr><tr>  <th>nu</th> <td>    8.5807</td> <td>    7.184</td> <td>    1.194</td> <td>    0.232</td> <td>[ -5.499, 22.660]</td></tr></table><br/><br/>Covariance estimator: robust
             </div>
+            
+            <p> <br> <br> </p>
               
               <img src="img/trendsmodel.png" alt="trends model plot" >
 
-            <p> <br> </p>
             
-            <p> We got a mean absolute error of 0.0044. <br> </p>
+            <p> <br> We got a mean absolute error of 0.0044. <br> </p>
             
               <h2>That's 20% improvement in the forecast!</h2>
-            
-            <p> <br> </p>
               
-              <p>This is quite a good performance. This might help predicting future increases in volatility which could suggest an upcoming crisis. 
+              <p> <br> This is quite a good performance. This might help predicting future increases in volatility which could suggest an upcoming crisis. 
                 It can be used to bet against the market by shorting stocks, contracting put options with banks. <br> </p>
                 
               <h2>Your turn!</h2>
